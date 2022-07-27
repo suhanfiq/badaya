@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'waist_joint_1', 'hip_joint_2', 'hip_right_joint_4', 'hip2_right_joint_8', 'knee_right_joint_6', 'knee2_right_joint_10', 'angkle_right_joint_12', 'foot_right_14', 'hip_left_joint_3', 'hip2_left_joint', 'knee_left_joint_5', 'knee2_left_joint_9', 'angkle_left_joint_11', 'foot_left_joint_13', ]
