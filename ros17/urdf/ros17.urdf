@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="ros17">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.000124114839544887 -0.0113416494897692 0.43472756676415"
+        rpy="0 0 0" />
+      <mass
+        value="0.221525162199479" />
+      <inertia
+        ixx="0.000101897481547252"
+        ixy="6.91625543312247E-08"
+        ixz="-5.14067994290901E-08"
+        iyy="0.00017338271994926"
+        iyz="8.0450949357083E-06"
+        izz="0.000158922224778329" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.886274509803922 0.776470588235294 0.67843137254902 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="waist_link">
+    <inertial>
+      <origin
+        xyz="0.0402135117595245 -0.00227355475099582 0.0289825682297939"
+        rpy="0 0 0" />
+      <mass
+        value="0.253025215067274" />
+      <inertia
+        ixx="0.000207131359721091"
+        ixy="1.33833804572889E-10"
+        ixz="-1.3723170848139E-07"
+        iyy="6.88385602261252E-05"
+        iyz="-1.27099608046946E-07"
+        izz="0.000198692839118258" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/waist_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.996078431372549 0.870588235294118 0.76078431372549 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/waist_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="waist_joint_1"
+    type="revolute">
+    <origin
+      xyz="3.0614E-05 0.016897 0.37241"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="waist_link" />
+    <axis
+      xyz="0 0.00097878 -1" />
+    <limit
+      lower="-1.832595713"
+      upper="0.55850536"
+      effort="3"
+      velocity="3" />
+  </joint>
+  <link
+    name="hip_link">
+    <inertial>
+      <origin
+        xyz="1.05862701882953E-05 0.0110096303128459 -0.0226635098061163"
+        rpy="0 0 0" />
+      <mass
+        value="0.138823597375586" />
+      <inertia
+        ixx="3.8353898191549E-05"
+        ixy="-1.39126716249765E-08"
+        ixz="-1.76957155598458E-10"
+        iyy="2.38836269151381E-05"
+        iyz="-1.82744996761977E-07"
+        izz="3.15172006085392E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/hip_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/hip_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip_joint_2"
+    type="revolute">
+    <origin
+      xyz="0.05515 -1.4533E-05 0.01485"
+      rpy="1.5708 1.7254E-05 -1.5708" />
+    <parent
+      link="waist_link" />
+    <child
+      link="hip_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.832595713"
+      upper="0.523598775"
+      effort="3"
+      velocity="3" />
+  </joint>
+  <link
+    name="hip_right_link">
+    <inertial>
+      <origin
+        xyz="-0.0042261 1.3036E-05 0.010102"
+        rpy="0 0 0" />
+      <mass
+        value="0.0081993" />
+      <inertia
+        ixx="1.3282E-06"
+        ixy="-2.1086E-14"
+        ixz="-1.2954E-11"
+        iyy="4.7991E-06"
+        iyz="3.9175E-12"
+        izz="4.4817E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/hip_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/hip_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip_right_joint_4"
+    type="revolute">
+    <origin
+      xyz="-0.045659 4.3903E-05 -0.0452"
+      rpy="3.1416 0 1.5698" />
+    <parent
+      link="hip_link" />
+    <child
+      link="hip_right_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.989675345"
+      upper="0.34906585"
+      effort="3"
+      velocity="3" />
+  </joint>
+  <link
+    name="hip2_right_link">
+    <inertial>
+      <origin
+        xyz="-0.0152802051528608 0.000300443248466897 -0.00231147744393123"
+        rpy="0 0 0" />
+      <mass
+        value="0.190491121315995" />
+      <inertia
+        ixx="4.96584513485555E-05"
+        ixy="-1.61906609668239E-07"
+        ixz="1.96075652820579E-07"
+        iyy="7.60017328225244E-05"
+        iyz="4.2533378843281E-09"
+        izz="8.0350391717973E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/hip2_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/hip2_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip2_right_joint_8"
+    type="revolute">
+    <origin
+      xyz="0.025902 1.4356E-05 0.0319"
+      rpy="0.00097878 1.5708 0" />
+    <parent
+      link="hip_right_link" />
+    <child
+      link="hip2_right_link" />
+    <axis
+      xyz="0 0.00097878 1" />
+    <limit
+      lower="-2.277654671"
+      upper="1.431169985"
+      effort="10"
+      velocity="3" />
+  </joint>
+  <link
+    name="knee_right_link">
+    <inertial>
+      <origin
+        xyz="2.80103607658289E-05 -0.0913090349124385 -0.0296791212752654"
+        rpy="0 0 0" />
+      <mass
+        value="0.0990788181729648" />
+      <inertia
+        ixx="4.93830312858525E-05"
+        ixy="7.60262641747144E-09"
+        ixz="-2.3102393163366E-09"
+        iyy="2.8911399032688E-05"
+        iyz="1.06282733200263E-06"
+        izz="3.65640945593291E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/knee_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/knee_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="knee_right_joint_6"
+    type="revolute">
+    <origin
+      xyz="0 0.029774 -0.026449"
+      rpy="-3.1416 -1.5698 1.5708" />
+    <parent
+      link="hip2_right_link" />
+    <child
+      link="knee_right_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.740166923"
+      upper="0.296705973"
+      effort="10"
+      velocity="3" />
+  </joint>
+  <link
+    name="knee2_right_link">
+    <inertial>
+      <origin
+        xyz="0.00804899987914626 -0.0336820805195894 0.0600831335075139"
+        rpy="0 0 0" />
+      <mass
+        value="0.0193582268613658" />
+      <inertia
+        ixx="3.00376034908172E-05"
+        ixy="-4.16144017849549E-06"
+        ixz="-5.26914050196279E-20"
+        iyy="1.54337706515249E-05"
+        iyz="-1.75745302770251E-19"
+        izz="2.14370365193726E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/knee2_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/knee2_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="knee2_right_joint_10"
+    type="revolute">
+    <origin
+      xyz="-0.00128 -0.11283 0.030619"
+      rpy="-3.1416 0 -3.1416" />
+    <parent
+      link="knee_right_link" />
+    <child
+      link="knee2_right_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.684242726"
+      upper="1.500983155"
+      effort="10"
+      velocity="3" />
+  </joint>
+  <link
+    name="angkle_right_link">
+    <inertial>
+      <origin
+        xyz="0.0163203907687403 0.00378323508746915 -0.0331964377564397"
+        rpy="0 0 0" />
+      <mass
+        value="0.237978786468489" />
+      <inertia
+        ixx="0.000105820220556833"
+        ixy="-1.07371172497559E-06"
+        ixz="-8.74353209543453E-14"
+        iyy="0.00017128304624527"
+        iyz="1.06118699693084E-06"
+        izz="0.000168335248057352" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/angkle_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.109803921568627 0.109803921568627 0.109803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/angkle_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="angkle_right_joint_12"
+    type="revolute">
+    <origin
+      xyz="-0.00128 -0.095 0.029519"
+      rpy="3.1416 0 -3.1416" />
+    <parent
+      link="knee2_right_link" />
+    <child
+      link="angkle_right_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.9373"
+      upper="1.85"
+      effort="10"
+      velocity="3" />
+  </joint>
+  <link
+    name="foot_right_link">
+    <inertial>
+      <origin
+        xyz="-0.00786355244260531 -0.029263878816474 0.0229100000022198"
+        rpy="0 0 0" />
+      <mass
+        value="0.0728910331402481" />
+      <inertia
+        ixx="0.000102630010024421"
+        ixy="1.59693308576024E-08"
+        ixz="-2.71242954596279E-14"
+        iyy="0.000132875190059069"
+        iyz="8.23025792940788E-16"
+        izz="3.33197131957042E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/foot_right_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/foot_right_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_right_14"
+    type="revolute">
+    <origin
+      xyz="0.0188 0 -0.0308"
+      rpy="-1.5708 -1.5703 1.5708" />
+    <parent
+      link="angkle_right_link" />
+    <child
+      link="foot_right_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.44346095"
+      upper="1.74532925"
+      effort="10"
+      velocity="3" />
+  </joint>
+  <link
+    name="hip_left_link">
+    <inertial>
+      <origin
+        xyz="-0.0042261600607178 3.6392684704678E-06 0.0101024507687434"
+        rpy="0 0 0" />
+      <mass
+        value="0.00819925239367436" />
+      <inertia
+        ixx="1.32821470046737E-06"
+        ixy="-3.33735824871366E-09"
+        ixz="-1.47194999853585E-11"
+        iyy="4.79909257297121E-06"
+        iyz="1.71482639026451E-10"
+        izz="4.48167539560129E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/hip_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/hip_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip_left_joint_3"
+    type="revolute">
+    <origin
+      xyz="0.045659 -4.3903E-05 -0.0452"
+      rpy="3.1411 0 1.5708" />
+    <parent
+      link="hip_link" />
+    <child
+      link="hip_left_link" />
+    <axis
+      xyz="0 -0.00052794 1" />
+    <limit
+      lower="-1.701696019"
+      upper="0.76794487"
+      effort="3"
+      velocity="3" />
+  </joint>
+  <link
+    name="hip2_left_link">
+    <inertial>
+      <origin
+        xyz="0.0152802051527449 -0.000304960239449467 0.00231049476447931"
+        rpy="0 0 0" />
+      <mass
+        value="0.190491121319325" />
+      <inertia
+        ixx="4.96584513490811E-05"
+        ixy="-1.61860331826735E-07"
+        ixz="1.9575862809758E-07"
+        iyy="7.60017328226701E-05"
+        iyz="-4.25333764200973E-09"
+        izz="8.03503917184428E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/hip2_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/hip2_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip2_left_joint_7"
+    type="revolute">
+    <origin
+      xyz="0.024622 2.1189E-05 0.0319"
+      rpy="1.5708 -1.5703 -1.5708" />
+    <parent
+      link="hip_left_link" />
+    <child
+      link="hip2_left_link" />
+    <axis
+      xyz="0 0.00097878 -1" />
+    <limit
+      lower="-2.277654671"
+      upper="0.872664625"
+      effort="10"
+      velocity="3" />
+  </joint>
+  <link
+    name="knee_left_link">
+    <inertial>
+      <origin
+        xyz="-3.43481037915483E-05 -0.0913246910017286 -0.0296309100289814"
+        rpy="0 0 0" />
+      <mass
+        value="0.0990788181435478" />
+      <inertia
+        ixx="4.93830312726799E-05"
+        ixy="-1.08863074097139E-08"
+        ixz="-2.30450261452917E-09"
+        iyy="2.89125233788717E-05"
+        iyz="1.06686670811748E-06"
+        izz="3.65629701960632E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/knee_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/knee_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="knee_left_joint_5"
+    type="revolute">
+    <origin
+      xyz="0 -0.029826 0.026391"
+      rpy="-3.1411 -1.5698 -1.5708" />
+    <parent
+      link="hip2_left_link" />
+    <child
+      link="knee_left_link" />
+    <axis
+      xyz="0 -0.00052794 -1" />
+    <limit
+      lower="-1.762782543"
+      upper="2.23402144"
+      effort="10"
+      velocity="3" />
+  </joint>
+  <link
+    name="knee2_left_link">
+    <inertial>
+      <origin
+        xyz="-0.0336820845821866 0.0106089827811632 0.0600831335075176"
+        rpy="0 0 0" />
+      <mass
+        value="0.0193582268613658" />
+      <inertia
+        ixx="1.54337748764643E-05"
+        ixy="-4.16144759182268E-06"
+        ixz="1.84193270080858E-19"
+        iyy="3.00375992658779E-05"
+        iyz="-3.9200089228888E-20"
+        izz="2.14370365193726E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/knee2_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/knee2_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="knee2_left_joint_9"
+    type="revolute">
+    <origin
+      xyz="-0.00128 -0.11281 0.030678"
+      rpy="3.1416 0.00052794 1.5708" />
+    <parent
+      link="knee_left_link" />
+    <child
+      link="knee2_left_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.356194488"
+      upper="0.191986218"
+      effort="10"
+      velocity="3" />
+  </joint>
+  <link
+    name="angkle_left_link">
+    <inertial>
+      <origin
+        xyz="-0.0229335658249763 0.0152939106906944 -0.0307868819473238"
+        rpy="0 0 0" />
+      <mass
+        value="0.181635293744239" />
+      <inertia
+        ixx="7.52709488472468E-05"
+        ixy="1.07043030324013E-06"
+        ixz="-1.07401466178785E-13"
+        iyy="4.69097394400458E-05"
+        iyz="1.06446704295086E-06"
+        izz="7.47612900454884E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/angkle_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.109803921568627 0.109803921568627 0.109803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/angkle_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="angkle_left_joint_11"
+    type="revolute">
+    <origin
+      xyz="-0.095 0.00128 0.029519"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="knee2_left_link" />
+    <child
+      link="angkle_left_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.487094181"
+      upper="0.785398163"
+      effort="10"
+      velocity="3" />
+  </joint>
+  <link
+    name="foot_left_link">
+    <inertial>
+      <origin
+        xyz="0.0078327 -0.029272 0.02291"
+        rpy="0 0 0" />
+      <mass
+        value="0.072891" />
+      <inertia
+        ixx="0.00010263"
+        ixy="1.5969E-08"
+        ixz="-3.5376E-14"
+        iyy="0.00013288"
+        iyz="-5.1443E-11"
+        izz="3.332E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/foot_left_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ros17/meshes/foot_left_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="foot_left_joint_13"
+    type="revolute">
+    <origin
+      xyz="-0.0188 0 -0.0308"
+      rpy="1.5708 1.5703 1.5708" />
+    <parent
+      link="angkle_left_link" />
+    <child
+      link="foot_left_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.44346095"
+      upper="1.710422665"
+      effort="10"
+      velocity="3" />
+  </joint>
+</robot>
