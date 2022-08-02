@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="manipulator4">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="2.17331708185498E-12 0.00178247112194396 0.00306162092244028"
+        rpy="0 0 0" />
+      <mass
+        value="0.0728910331402469" />
+      <inertia
+        ixx="3.33197131957043E-05"
+        ixy="-2.71242780722914E-14"
+        ixz="8.0980735478671E-16"
+        iyy="0.000102630001592682"
+        iyz="1.6496497981213E-12"
+        izz="0.000132875198490806" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator4/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator4/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.000227538997475629 0.0154251824435588 -0.0551470673142738"
+        rpy="0 0 0" />
+      <mass
+        value="0.180088485284144" />
+      <inertia
+        ixx="7.46163435024469E-05"
+        ixy="1.04652081852546E-06"
+        ixz="5.66413204468217E-10"
+        iyy="4.6834481154212E-05"
+        iyz="1.07372682745277E-06"
+        izz="7.51968011341353E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator4/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.109803921568627 0.109803921568627 0.109803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator4/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0.02791 0.0096306 0.03233"
+      rpy="1.5708 -0.00052794 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="3.14"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="-0.00932898241717806 0.0613340430799498 -0.0305322255214537"
+        rpy="0 0 0" />
+      <mass
+        value="0.0193582268613659" />
+      <inertia
+        ixx="3.00375991978184E-05"
+        ixy="4.16144713130199E-06"
+        ixz="2.19699734046279E-09"
+        iyy="1.5433776617761E-05"
+        iyz="-3.1693652762254E-09"
+        izz="2.14370348461358E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator4/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator4/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0.0308 -1.6277E-05 -0.03202"
+      rpy="-1.5708 1.5708 -1.5708" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 -0.00052794 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="3.14"
+      velocity="3.14" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="2.84556350677589E-05 0.0218754116356132 -0.0255801322315767"
+        rpy="0 0 0" />
+      <mass
+        value="0.0975320096834529" />
+      <inertia
+        ixx="4.93088846498694E-05"
+        ixy="7.60384502706862E-09"
+        ixz="-2.30622525887365E-09"
+        iyy="2.88361322903035E-05"
+        iyz="1.05882453673914E-06"
+        izz="3.6419155365456E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator4/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.109803921568627 0.109803921568627 0.109803921568627 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator4/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0.0950025208757817 -0.00474984497089004"
+      rpy="0 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 -0.000527940633375548 0.999999860639334" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="3.14"
+      velocity="3.14" />
+  </joint>
+</robot>
